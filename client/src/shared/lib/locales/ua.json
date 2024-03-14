@@ -1,0 +1,97 @@
+{
+	"Home": {
+		"press-key-enter": "Натисніть клавішу Enter",
+		"description": "Ідеальний інструмент для організації життя та підвищення продуктивності."
+	},
+	
+	"Not-Found": {
+		"title": "Сторінка не знайдена",
+		"redirect": "На головну"
+	},
+	"Statistic": {
+		"all-tasks": "Всі завдання",
+		"total-completed-tasks": "Всього виконаних завдань",
+		"current-month": "Поточний місяць",
+		"daily-efficiency": "Щоденна ефективність",
+		"completed": "Виконано",
+		"all-time": "За весь час",
+		"monday": "Понеділок",
+		"tuesday": "Вівторок",
+		"wednesday": "Середа",
+		"thursday": "Четвер",
+		"friday": "П'ятниця",
+		"saturday": "Субота",
+		"sunday": "Неділя"
+	},
+
+	"Form": {
+		"login-title": "Логін",
+		"register-title": "Реєстрація",
+		"email": "Пошта:",
+		"password": "Пароль:",
+		"name": "Ім'я:",
+		"email-placeholder": "Введіть пошту:",
+		"password-placeholder": "Введіть пароль:",
+		"name-placeholder": "Введіть ім'я:",
+		"duration": "Тривалість (хв.):",
+		"color": "Колір:",
+		"update": "Оновити",
+		"save": "Зберегти",
+		"create": "Створити",
+		"login-switch": "не маєте облікового запису?",
+		"register-switch": "Ви вже маєте обліковий запис?",
+		"matching-password": "Підтвердження паролю",
+		"email-valid": "Електронна адреса недійсна!",
+		"field-required": "Це поле є обов'язковим!",
+		"password-length-valid": "Пароль має бути не менше 6 символів!"
+	},
+	"Sidebar": {
+		"Dashboard": "Панель приладів",
+		"Tasks": "Задачі",
+		"Timer": "Таймер",
+		"Time management": "Тайм менеджмент",
+		"Settings": "Налаштування"
+	},
+	"Tasks": {
+		"list": "Список",
+		"board": "Дошка",
+		"task-name": "Назва завдання",
+		"due-date": "Термін виконання",
+		"priority": "Пріоритет",
+		"today": "Сьогодні",
+		"tomorrow": "Завтра",
+		"on-this-week": "На цьому тижні",
+		"on-next-week": "Наступного тижня",
+		"later": "Пізніше",
+		"completed": "Виконано",
+		"old": "Старі",
+		"add-task": "Додати завдання...",
+		"unknown": "Без назви"
+	},
+
+	"Timer": {
+		"create_session": "Створити сесію"
+	},
+	"Settings": {
+		"user-data": "Дані користувача",
+		"timer-setting": "Налаштування таймеру",
+		"work-interval": "Робочий інтервал (хв. )",
+		"break-interval": "Перерва (хв. )",
+		"interval-count": "Кількість раундів (макс. 10)",
+		"work-interval-placeholder": "Введіть робочий інтервал (хв.):",
+		"break-interval-placeholder": "Введіть інтервал перерви (хв.):",
+		"interval-count-placeholder": "Введіть к-сть інтервалів",
+		"logout": "Вийти"
+	},
+	"Select": {
+		"click-for-select": "Вибрати пріоритет",
+		"medium": "MEDIUM",
+		"high": "HIGH",
+		"low": "LOW"
+	},
+	"Time-management": {
+		"hours-out": "{count, plural, =0 {годин} =1 {година} one {# година} few {# години} many {# годин} other {# години}} залишилося для сну.",
+		"add-the-first-time": "Додайте перший часовий блок у формі справа",
+		"no-hours-left": "На сон не залишилося"
+	}
+}

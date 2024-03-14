@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--primary: 60deg 4.3% 9%;
+		--secondary: 45deg 1.7% 52.9%;
+		--accent-orange: 32deg 77% 46.1%;
+		--accent-green: 109deg 51.9% 47.3%;
+		--error: 345 98.1% 41.0%;
+		--background: 45deg 100% 99.2%;
+	}
+	:root[data-theme="dark"] {
+		--primary: 45deg 100% 99.2%;
+		--secondary: 45deg 1.7% 52.9%;
+		--error: 345 98.1% 41.0%;
+		--accent-green: 109deg 51.9% 47.3%;
+		--accent-orange: 32deg 77% 46.1%;
+		--background: 60deg 4.3% 9%;
+	}
+}
+
+:root,
+body {
+	@apply bg-background min-h-screen;
+}
+
+.main-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: hsl(var(--accent-orange) / 60%) hsl(var(--background));
+}
+
+.flex-container-center {
+	@apply flex items-center justify-center min-h-screen;
+}
+
+.button-3d {
+	box-shadow: 3px 3px 0;
+	margin-right: 6px;
+}
+
+.button-3d:active {
+	transform: translate(3px, 3px);
+	box-shadow: 0 0 0;
+}
+
+.rdp {
+	--rdp-cell-size: 2rem !important;
+	--rdp-accent-color: hsl(var(--accent-orange) / 80%) !important;
+	--rdp-outline-selected: 3px solid hsl(var(--accent-orange) / 20%) !important;
+	--rdp-background-color: hsl(var(--accent-orange) / 10%) !important;
+}

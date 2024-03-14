@@ -1,0 +1,120 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  token         Token[]
+  tasks         Task[]
+  timerSessions TimerSession[]
+  timerSettings TimerSettings?
+  timeBlocks    TimeBlock[]
+
+  @@map("users")
+}
+
+model Token {
+  token     String   @unique
+  exp       DateTime
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  userAgent String   @map("user_agent")
+
+  @@map("tokens")
+}
+
+model TimerSettings {
+  id String @id @default(cuid())
+
+  workInterval  Int? @default(25) @map("work_interval")
+  breakInterval Int? @default(5) @map("break_interval")
+  intervalCount Int? @default(7) @map("interval_count")
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("timer_settings")
+}
+
+model Task {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  name        String
+  priority    Priority?
+  isCompleted Boolean   @default(false) @map("is_completed")
+
+  userId String @map("user_id")
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("task")
+}
+
+model TimerSession {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  isCompleted Boolean @default(false) @map("is_completed")
+
+  userId String       @map("user_id")
+  user   User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rounds TimerRound[]
+
+  @@map("timer_session")
+}
+
+model TimerRound {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  isCompleted  Boolean @default(false) @map("is_completed")
+  totalSeconds Int     @map("total_seconds")
+
+  timerSessionId String       @map("timer_session_id")
+  session        TimerSession @relation(fields: [timerSessionId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@map("timer_round")
+}
+
+model TimeBlock {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  name     String
+  color    String?
+  duration Int
+  order    Int     @default(1)
+
+  userId String @map("user_id")
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("time_block")
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+}

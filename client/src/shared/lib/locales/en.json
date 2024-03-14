@@ -1,0 +1,100 @@
+{
+	"Home": {
+		"press-key-enter": "Press key Enter",
+		"description": "The perfect tool to organize your life and boost productivity."
+	},
+
+	"Not-Found": {
+		"title": "Page not found",
+		"redirect": "go home page"
+	},
+
+	"Statistic": {
+		"all-tasks": "All tasks",
+		"total-completed-tasks": "Total completed tasks",
+		"current-month": "Current month",
+		"daily-efficiency": "Daily efficiency",
+		"all-time": "All time",
+		"completed": "Completed",
+		"monday": "Monday",
+		"tuesday": "Tuesday",
+		"wednesday": "Wednesday",
+		"thursday": "Thursday",
+		"friday": "Friday",
+		"saturday": "Saturday",
+		"sunday": "Sunday"
+	},
+
+	"Form": {
+		"login-title": "Login",
+		"register-title": "Register",
+		"email": "Email:",
+		"password": "Password:",
+		"name": "Name:",
+		"email-placeholder": "Enter email:",
+		"password-placeholder": "Enter password:",
+		"name-placeholder": "Enter name:",
+		"duration": "Enter duration (min.):",
+		"color": "Color:",
+		"update": "Update",
+		"save": "Save",
+		"create": "Create",
+		"login-switch": "don't have an account?",
+		"register-switch": "You already have an account?",
+		"matching-password": "Matching password",
+		"email-valid": "Email is invalid!",
+		"field-required": "This field is required!",
+		"password-length-valid": "Password must be at least 6 characters long!"
+	},
+	"Sidebar": {
+		"Dashboard": "Dashboard",
+		"Tasks": "Tasks",
+		"Timer": "Timer",
+		"Time management": "Time management",
+		"Settings": "Settings"
+	},
+	"Tasks": {
+		"list": "List",
+		"board": "Board",
+		"task-name": "Task name",
+		"due-date": "Due date",
+		"priority": "Priority",
+		"today": "Today",
+		"tomorrow": "Tomorrow",
+		"on-this-week": "On this week",
+		"on-next-week": "On next week",
+		"later": "Later",
+		"completed": "Completed",
+		"old": "Old",
+		"add-task": "Add task...",
+		"click-for-select": "Click for select",
+		"unknown": "unknown"
+	},
+
+	"Timer": {
+		"create_session": "Create session"
+	},
+	"Settings": {
+		"user-data": "User data",
+		"timer-setting": "Timer setting",
+		"work-interval": "Work interval (min.):",
+		"break-interval": "Break interval (min.):",
+		"interval-count": "Interval count (max 10):",
+		"work-interval-placeholder": "Enter work interval (min.):",
+		"break-interval-placeholder": "Enter break interval (min.):",
+		"interval-count-placeholder": "Enter interval count (max value 10):",
+		"logout": "Logout"
+	},
+	"Select": {
+		"click-for-select": "Click for select",
+		"medium": "MEDIUM",
+		"high": "HIGH",
+		"low": "LOW"
+	},
+	"Time-management": {
+		"hours-out": "{count, plural, =0 {hours} =1 {hour} other {# hours}} out of 24 left for sleep",
+		"add-the-first-time": "Add the first time-block on the right form",
+		"no-hours-left": "No hours left for sleep",
+		"test": "out of 24 left for sleep"
+	}
+}
