@@ -1,4 +1,3 @@
-import { Loader } from "@/shared/ui";
 import { SideBar } from "@/widgets/sidebar/SideBar";
 
 export const DashboardLayout = ({

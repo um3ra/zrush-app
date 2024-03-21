@@ -5,7 +5,7 @@ import { authService } from "./api-user/auth.service";
 import { getAccessToken, removeFromStorage } from "./api-user/token-storage";
 
 const options: CreateAxiosDefaults = {
-    baseURL: process.env.API_URL,
+    baseURL: process.env.NXT_URL,
     headers: {
         "Content-Type": "application/json"
     },
