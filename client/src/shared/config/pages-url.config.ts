@@ -1,5 +1,5 @@
 export class DASHBOARD_PAGES {
-    private static readonly root = `/i`;
+    private static readonly root = `/personal`;
     static readonly HOME = this.root;
     static readonly TASKS = `${this.root}/tasks`;
     static readonly HABITS = `${this.root}/habits`;

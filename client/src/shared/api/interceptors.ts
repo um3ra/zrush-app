@@ -5,7 +5,7 @@ import { authService } from "./api-user/auth.service";
 import { getAccessToken, removeFromStorage } from "./api-user/token-storage";
 
 const options: CreateAxiosDefaults = {
-    baseURL: process.env.NXT_URL,
+    baseURL: "/api",
     headers: {
         "Content-Type": "application/json"
     },
@@ -17,7 +17,6 @@ const axiosInstanceWithAuth = axios.create(options);
 
 axiosInstanceWithAuth.interceptors.request.use((config) => {
     const accessToken = getAccessToken();
-
     if (config?.headers && accessToken)
         config.headers.Authorization = accessToken;
 
@@ -28,7 +27,6 @@ axiosInstanceWithAuth.interceptors.response.use(
     (config) => config,
     async (error) => {
         const originalRequest = error.config;
-
         if (
             (error?.response?.status === 401 ||
                 extractErrorMessage(error) === "jwt expired" ||

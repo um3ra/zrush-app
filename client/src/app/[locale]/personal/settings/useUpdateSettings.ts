@@ -15,7 +15,7 @@ export const useUpdateSettings = () => {
 
             onSuccess: () => {
                 queryClient.invalidateQueries({
-                    queryKey: ["settings"]
+                    queryKey: ["timerSettings"]
                 });
 
                 toast.success("Timer settings updated successfully!");
