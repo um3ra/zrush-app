@@ -21,7 +21,7 @@ export class UserController {
     @UseInterceptors(ClassSerializerInterceptor)
     @Get("/profile")
     async getProfile(@CurrentUser("id") id: string) {
-        const user = await this.userService.findByEmail(id);
+        const user = await this.userService.findByEmailOrId(id);
         return new UserResponse(user);
     }
 
